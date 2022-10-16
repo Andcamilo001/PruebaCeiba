@@ -28,6 +28,7 @@
 		E03601DD28FB78C7009ED6FC /* ModelPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03601DC28FB78C7009ED6FC /* ModelPost.swift */; };
 		E03601DF28FB7FCC009ED6FC /* PostListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03601DE28FB7FCC009ED6FC /* PostListView.swift */; };
 		E03601E128FB8070009ED6FC /* PostCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03601E028FB8070009ED6FC /* PostCellView.swift */; };
+		E03601E328FB8B35009ED6FC /* SearchTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03601E228FB8B35009ED6FC /* SearchTableView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +73,7 @@
 		E03601DC28FB78C7009ED6FC /* ModelPost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelPost.swift; sourceTree = "<group>"; };
 		E03601DE28FB7FCC009ED6FC /* PostListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListView.swift; sourceTree = "<group>"; };
 		E03601E028FB8070009ED6FC /* PostCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCellView.swift; sourceTree = "<group>"; };
+		E03601E228FB8B35009ED6FC /* SearchTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -179,6 +181,7 @@
 				E03601D628FB69DA009ED6FC /* UserCellView.swift */,
 				E03601DE28FB7FCC009ED6FC /* PostListView.swift */,
 				E03601E028FB8070009ED6FC /* PostCellView.swift */,
+				E03601E228FB8B35009ED6FC /* SearchTableView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -357,6 +360,7 @@
 				E03601D928FB751B009ED6FC /* PostListScreen.swift in Sources */,
 				E03601C928FB5853009ED6FC /* WebServices.swift in Sources */,
 				E03601DB28FB783F009ED6FC /* PostListViewModel.swift in Sources */,
+				E03601E328FB8B35009ED6FC /* SearchTableView.swift in Sources */,
 				E03601C628FB5812009ED6FC /* ModelUsers.swift in Sources */,
 				E036019428FB57B2009ED6FC /* PruebaCeibaApp.swift in Sources */,
 				E03601CD28FB5B27009ED6FC /* UserViewModel.swift in Sources */,

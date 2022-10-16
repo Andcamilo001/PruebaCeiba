@@ -9,23 +9,35 @@ import SwiftUI
 
 struct UserScreenView: View {
     
+    @State var searchText = ""
+    
+    
     @StateObject var uvm: UserViewModel = UserViewModel()
     
     var body: some View {
+        
+        
         NavigationView{
             
-            UserListView(results: uvm.usersInfos)
-                .task {
-                    await uvm.getUsers()
-                }
-                .navigationTitle("Prueba de Ingreso")
+            
                 
+                UserListView(results: uvm.usersInfos)
+                    .task {
+                        await uvm.getUsers()
+                    }
+                    .navigationTitle("Prueba de Ingreso")
+                    .searchable(text: $searchText)
+            
         }
     }
 }
+
+
 
 struct UserScreenView_Previews: PreviewProvider {
     static var previews: some View {
         UserScreenView()
     }
 }
+
+

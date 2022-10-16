@@ -11,9 +11,11 @@ import Foundation
 class UserViewModel: ObservableObject {
     
     @Published var usersInfos: [UserListViewModel] = []
-    //@Published var results: [Users] = []
+    @Published private(set) var isLoading = false
     
     func getUsers() async {
+        
+        isLoading = true
         
         do{
            let usersList = try await Webservice().get(url: Constans.urls.usersURL) { data in
@@ -27,9 +29,13 @@ class UserViewModel: ObservableObject {
             
         } catch {
             print(error)
+            
         }
         
+        
     }
+    
+    
     
 }
 

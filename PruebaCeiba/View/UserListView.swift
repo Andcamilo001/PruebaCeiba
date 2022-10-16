@@ -12,14 +12,16 @@ struct UserListView: View {
     let results: [UserListViewModel]
     
     var body: some View {
+        
         List(results) { result in
-         
+            
             NavigationLink(destination: PostListScreen(users: result)
                 .navigationTitle("\(result.name)")){
-                UserCellView(usersL: result)
-            }
-          
+                    UserCellView(usersL: result)
+                }
+            
         }.listStyle(.plain)
+        
     }
 }
 
