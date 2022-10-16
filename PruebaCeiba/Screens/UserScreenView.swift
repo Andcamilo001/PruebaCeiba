@@ -19,6 +19,7 @@ struct UserScreenView: View {
                     await uvm.getUsers()
                 }
                 .navigationTitle("Prueba de Ingreso")
+                
         }
     }
 }

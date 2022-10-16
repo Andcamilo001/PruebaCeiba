@@ -14,7 +14,8 @@ struct UserListView: View {
     var body: some View {
         List(results) { result in
          
-            NavigationLink(destination: PostListScreen(users: result)){
+            NavigationLink(destination: PostListScreen(users: result)
+                .navigationTitle("\(result.name)")){
                 UserCellView(usersL: result)
             }
           
