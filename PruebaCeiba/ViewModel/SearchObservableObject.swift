@@ -11,7 +11,7 @@ import Foundation
 class SearchObervableObject: ObservableObject {
     
     
-    //@Published var data: [UserListViewModel] = []
+    
     @Published var searchResults: [UserListViewModel] = []
     
 

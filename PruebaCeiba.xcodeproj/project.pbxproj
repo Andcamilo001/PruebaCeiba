@@ -131,10 +131,9 @@
 				E03601C428FB57EC009ED6FC /* Model */,
 				E03601C328FB57EA009ED6FC /* View */,
 				E03601C228FB57E7009ED6FC /* ViewModel */,
+				E05CDC9328FDD38600F12834 /* Repository */,
 				E036019528FB57B2009ED6FC /* ContentView.swift */,
 				E036019728FB57B5009ED6FC /* Assets.xcassets */,
-				E036019C28FB57B5009ED6FC /* Persistence.swift */,
-				E036019E28FB57B5009ED6FC /* PruebaCeiba.xcdatamodeld */,
 				E036019928FB57B5009ED6FC /* Preview Content */,
 			);
 			path = PruebaCeiba;
@@ -218,6 +217,15 @@
 				E03601D828FB751B009ED6FC /* PostListScreen.swift */,
 			);
 			path = Screens;
+			sourceTree = "<group>";
+		};
+		E05CDC9328FDD38600F12834 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				E036019E28FB57B5009ED6FC /* PruebaCeiba.xcdatamodeld */,
+				E036019C28FB57B5009ED6FC /* Persistence.swift */,
+			);
+			path = Repository;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

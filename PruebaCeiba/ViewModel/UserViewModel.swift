@@ -20,8 +20,9 @@ class UserViewModel: ObservableObject {
         do{
            let usersList = try await Webservice().get(url: Constans.urls.usersURL) { data in
                 return try? JSONDecoder().decode([Users].self, from: data)
+               
             }
-            
+           
             self.usersInfos = usersList.map(UserListViewModel.init)
             
             
@@ -32,7 +33,7 @@ class UserViewModel: ObservableObject {
             
         }
         
-        
+        self.isLoading = false
     }
     
     

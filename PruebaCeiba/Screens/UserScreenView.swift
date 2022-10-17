@@ -13,25 +13,33 @@ struct UserScreenView: View {
     
     
     @StateObject var uvm: UserViewModel = UserViewModel()
-     
-   
+    
+    
     
     var body: some View {
         
         
-        NavigationView{           
-            
-                
-                UserListView(results: uvm.usersInfos)
-                    .task {
-                        await uvm.getUsers()
-                    }
-                    .navigationTitle("Prueba de Ingreso")
-        }
         
+        ZStack {
+            
+            if uvm.isLoading {
+                ProgressView()
+            } else {
+                
+                NavigationView{
+                    
+                    
+                    UserListView(results: uvm.usersInfos)
+                        .task {
+                            await uvm.getUsers()
+                        }
+                        .navigationTitle("Prueba de Ingreso")
+                }
+            }
+            
+        }
     }
 }
-
 
 
 struct UserScreenView_Previews: PreviewProvider {
