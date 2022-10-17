@@ -30,12 +30,15 @@ struct UserCellView: View {
                 Text("\(usersL.email)")
             }
             
+            NavigationLink{PostListScreen(users: usersL)
+                    .navigationTitle("\(usersL.name)")
+            }label: {
                 Text("VER PUBLICACIONES")
                     .font(.footnote)
                     .padding()
                     .padding(.leading, 90)
                     .foregroundColor(Color(red: 43/255, green: 94/255, blue: 50/255, opacity: 1.0))
-            
+            }
         }
         .frame(maxWidth: .infinity, alignment: .leading)
         .padding()
@@ -45,8 +48,3 @@ struct UserCellView: View {
     }
 }
 
-/*struct UserCellView_Previews: PreviewProvider {
-    static var previews: some View {
-        UserCellView()
-    }
-}*/

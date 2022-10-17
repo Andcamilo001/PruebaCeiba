@@ -9,24 +9,26 @@ import SwiftUI
 
 struct UserListView: View {
     
+    @StateObject var oO = SearchObervableObject()
+    @State private var searchText = ""
+    
     let results: [UserListViewModel]
     
     var body: some View {
         
-        List(results) { result in
+        List(searchText.isEmpty ? results: oO.searchResults) { result in
             
-            NavigationLink(destination: PostListScreen(users: result)
-                .navigationTitle("\(result.name)")){
-                    UserCellView(usersL: result)
-                }
-            
-        }.listStyle(.plain)
+            UserCellView(usersL: result)
+        }
+        .listStyle(.plain)
+        .searchable(text: $searchText, placement: .navigationBarDrawer(displayMode: .always))
+        .onChange(of: searchText) { searchText in
+            oO.searchResults = results.filter( { result in
+                result.name.lowercased().contains(searchText.lowercased())
+            })
+        }
         
     }
+    
+    
 }
-
-/*struct UserListView_Previews: PreviewProvider {
-    static var previews: some View {
-        UserListView()
-    }
-}*/

@@ -9,16 +9,17 @@ import SwiftUI
 
 struct UserScreenView: View {
     
-    @State var searchText = ""
+    
     
     
     @StateObject var uvm: UserViewModel = UserViewModel()
+     
+   
     
     var body: some View {
         
         
-        NavigationView{
-            
+        NavigationView{           
             
                 
                 UserListView(results: uvm.usersInfos)
@@ -26,9 +27,8 @@ struct UserScreenView: View {
                         await uvm.getUsers()
                     }
                     .navigationTitle("Prueba de Ingreso")
-                    .searchable(text: $searchText)
-            
         }
+        
     }
 }
 
