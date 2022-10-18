@@ -12,7 +12,7 @@
 		E036019828FB57B5009ED6FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E036019728FB57B5009ED6FC /* Assets.xcassets */; };
 		E036019B28FB57B5009ED6FC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E036019A28FB57B5009ED6FC /* Preview Assets.xcassets */; };
 		E036019D28FB57B5009ED6FC /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = E036019C28FB57B5009ED6FC /* Persistence.swift */; };
-		E03601A028FB57B5009ED6FC /* PruebaCeiba.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E036019E28FB57B5009ED6FC /* PruebaCeiba.xcdatamodeld */; };
+		E03601A028FB57B5009ED6FC /* UserModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E036019E28FB57B5009ED6FC /* UserModel.xcdatamodeld */; };
 		E03601AA28FB57B5009ED6FC /* PruebaCeibaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03601A928FB57B5009ED6FC /* PruebaCeibaTests.swift */; };
 		E03601B428FB57B6009ED6FC /* PruebaCeibaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03601B328FB57B6009ED6FC /* PruebaCeibaUITests.swift */; };
 		E03601B628FB57B6009ED6FC /* PruebaCeibaUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03601B528FB57B6009ED6FC /* PruebaCeibaUITestsLaunchTests.swift */; };
@@ -29,6 +29,7 @@
 		E03601DF28FB7FCC009ED6FC /* PostListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03601DE28FB7FCC009ED6FC /* PostListView.swift */; };
 		E03601E128FB8070009ED6FC /* PostCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03601E028FB8070009ED6FC /* PostCellView.swift */; };
 		E03601E528FB9D30009ED6FC /* SearchObservableObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03601E428FB9D30009ED6FC /* SearchObservableObject.swift */; };
+		E05CDC9528FDE53800F12834 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05CDC9428FDE53800F12834 /* DataController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +75,7 @@
 		E03601DE28FB7FCC009ED6FC /* PostListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListView.swift; sourceTree = "<group>"; };
 		E03601E028FB8070009ED6FC /* PostCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCellView.swift; sourceTree = "<group>"; };
 		E03601E428FB9D30009ED6FC /* SearchObservableObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchObservableObject.swift; sourceTree = "<group>"; };
+		E05CDC9428FDE53800F12834 /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -222,8 +224,9 @@
 		E05CDC9328FDD38600F12834 /* Repository */ = {
 			isa = PBXGroup;
 			children = (
-				E036019E28FB57B5009ED6FC /* PruebaCeiba.xcdatamodeld */,
+				E036019E28FB57B5009ED6FC /* UserModel.xcdatamodeld */,
 				E036019C28FB57B5009ED6FC /* Persistence.swift */,
+				E05CDC9428FDE53800F12834 /* DataController.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -371,10 +374,11 @@
 				E03601DB28FB783F009ED6FC /* PostListViewModel.swift in Sources */,
 				E03601C628FB5812009ED6FC /* ModelUsers.swift in Sources */,
 				E036019428FB57B2009ED6FC /* PruebaCeibaApp.swift in Sources */,
+				E05CDC9528FDE53800F12834 /* DataController.swift in Sources */,
 				E03601CD28FB5B27009ED6FC /* UserViewModel.swift in Sources */,
 				E03601D228FB6855009ED6FC /* UserScreenView.swift in Sources */,
 				E03601E128FB8070009ED6FC /* PostCellView.swift in Sources */,
-				E03601A028FB57B5009ED6FC /* PruebaCeiba.xcdatamodeld in Sources */,
+				E03601A028FB57B5009ED6FC /* UserModel.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -703,13 +707,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		E036019E28FB57B5009ED6FC /* PruebaCeiba.xcdatamodeld */ = {
+		E036019E28FB57B5009ED6FC /* UserModel.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
 				E036019F28FB57B5009ED6FC /* PruebaCeiba.xcdatamodel */,
 			);
 			currentVersion = E036019F28FB57B5009ED6FC /* PruebaCeiba.xcdatamodel */;
-			path = PruebaCeiba.xcdatamodeld;
+			path = UserModel.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

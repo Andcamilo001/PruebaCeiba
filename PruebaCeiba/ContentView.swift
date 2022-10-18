@@ -5,7 +5,7 @@
 //  Created by Andres Camilo Lezcano on 15/10/22.
 //
 
-import SwiftUI
+/*import SwiftUI
 import CoreData
 
 struct ContentView: View {
@@ -86,3 +86,4 @@ struct ContentView_Previews: PreviewProvider {
         ContentView().environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
     }
 }
+*/
