@@ -18,24 +18,22 @@ struct UserScreenView: View {
     
     var body: some View {
         
-        
-        
         ZStack {
             
-            if uvm.isLoading {
-                ProgressView()
-            } else {
+            /*if uvm.isLoading {
+             ProgressView()
+             } else {*/
+            
+            NavigationView{
                 
-                NavigationView{
-                    
-                    
-                    UserListView(results: uvm.usersInfos)
-                        .task {
-                            await uvm.getUsers()
-                        }
-                        .navigationTitle("Prueba de Ingreso")
-                }
+                
+                UserListView(results: uvm.usersInfos)
+                    .task {
+                        await uvm.getUsers()
+                    }
+                    .navigationTitle("Prueba de Ingreso")
             }
+            //}
             
         }
     }

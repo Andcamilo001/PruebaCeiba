@@ -11,32 +11,74 @@ import CoreData
 
 class DataController: ObservableObject {
     
-    let container = NSPersistentContainer(name: "UserModel")
+    let persistentData: NSPersistentContainer
     
-    init() {
-        container.loadPersistentStores { desc, error in
+    static let shared = DataController()
+    
+    private init() {
+        persistentData = NSPersistentContainer(name: "UserModel")
+        persistentData.loadPersistentStores { description, error in
             if let error = error {
-                print("Fail to loaded data...\(error.localizedDescription)")
+                fatalError("Failed to initialize Core Data \(error)")
             }
         }
+        
+        let directories = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)
+        print(directories[0])
     }
     
-    func save(context: NSManagedObjectContext){
+    var viewContext: NSManagedObjectContext {
+        return persistentData.viewContext
+    }
+    
+    var backgroundContext: NSManagedObjectContext {
+           return persistentData.newBackgroundContext()
+    }
+   
+    
+    func save() throws {
         do {
-            try context.save()
-            print("Data Saved!!!")
+            try viewContext.save()
         } catch {
-            print("Couldnt save a data")
+            print(error)
         }
     }
     
-    func addUser(id: Int64 ,name: String, phone: String, email: String, context: NSManagedObjectContext) {
-        let user = User(context: context)
-        user.id = id
-        user.name = name
-        user.phone = phone
-        user.email = email
+    
+    func importData() async throws {
         
-        save(context: context)
+        func removeAllData() {
+            
+            let request: NSFetchRequest<NSFetchRequestResult> = NSFetchRequest(entityName: "UsersDTO")
+            let deleteRequest = NSBatchDeleteRequest(fetchRequest: request)
+            
+            do {
+                try viewContext.execute(deleteRequest)
+            } catch {
+                print(error)
+            }
+        }
+        
+        let usersDTOs = try await Webservice().get(url: Constans.urls.usersURL) { data in
+            return try? JSONDecoder().decode([Users].self, from: data)
+            
+        }
+        
+        removeAllData()
+        
+        for users in usersDTOs {
+            
+            try await backgroundContext.perform {
+                let usersDTO = UsersDTO(context: self.viewContext)
+                usersDTO.id = Int64(users.id)
+                usersDTO.name = users.name
+                usersDTO.phone = users.phone
+                usersDTO.email = users.email
+                try self.save()               
+                
+            }
+            
+            
+        }
     }
 }
