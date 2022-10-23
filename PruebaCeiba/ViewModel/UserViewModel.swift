@@ -11,21 +11,21 @@ import Foundation
 class UserViewModel: ObservableObject {
     
     @Published var usersInfos: [UserListViewModel] = []
-    @Published private(set) var isLoading = false
+    
     
     func getUsers() async {
         
-        isLoading = true
+      
         
         do{
-           let usersList = try await Webservice().get(url: Constans.urls.usersURL) { data in
+            
+            let usersList = try await Webservice().get(url: Constans.urls.usersURL) { data in
                 return try? JSONDecoder().decode([Users].self, from: data)
-               	
+                
+               
             }
-           
+            
             self.usersInfos = usersList.map(UserListViewModel.init)
-            
-            
             
             
         } catch {
@@ -33,7 +33,8 @@ class UserViewModel: ObservableObject {
             
         }
         
-        self.isLoading = false
+        
+        
     }
     
     
@@ -47,9 +48,9 @@ struct UserListViewModel: Identifiable {
     private let users: Users
     
     init(_ users: Users) {
-    self.users = users
-    
-}
+        self.users = users
+        
+    }
     
     var id: Int {
         users.id

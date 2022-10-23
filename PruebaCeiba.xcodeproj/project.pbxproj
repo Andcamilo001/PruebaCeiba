@@ -8,10 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		E036019428FB57B2009ED6FC /* PruebaCeibaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E036019328FB57B2009ED6FC /* PruebaCeibaApp.swift */; };
-		E036019628FB57B2009ED6FC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E036019528FB57B2009ED6FC /* ContentView.swift */; };
 		E036019828FB57B5009ED6FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E036019728FB57B5009ED6FC /* Assets.xcassets */; };
 		E036019B28FB57B5009ED6FC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E036019A28FB57B5009ED6FC /* Preview Assets.xcassets */; };
-		E036019D28FB57B5009ED6FC /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = E036019C28FB57B5009ED6FC /* Persistence.swift */; };
 		E03601A028FB57B5009ED6FC /* UserModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E036019E28FB57B5009ED6FC /* UserModel.xcdatamodeld */; };
 		E03601AA28FB57B5009ED6FC /* PruebaCeibaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03601A928FB57B5009ED6FC /* PruebaCeibaTests.swift */; };
 		E03601B428FB57B6009ED6FC /* PruebaCeibaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03601B328FB57B6009ED6FC /* PruebaCeibaUITests.swift */; };
@@ -52,10 +50,8 @@
 /* Begin PBXFileReference section */
 		E036019028FB57B2009ED6FC /* PruebaCeiba.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PruebaCeiba.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E036019328FB57B2009ED6FC /* PruebaCeibaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PruebaCeibaApp.swift; sourceTree = "<group>"; };
-		E036019528FB57B2009ED6FC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		E036019728FB57B5009ED6FC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E036019A28FB57B5009ED6FC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		E036019C28FB57B5009ED6FC /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		E036019F28FB57B5009ED6FC /* PruebaCeiba.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PruebaCeiba.xcdatamodel; sourceTree = "<group>"; };
 		E03601A528FB57B5009ED6FC /* PruebaCeibaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PruebaCeibaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E03601A928FB57B5009ED6FC /* PruebaCeibaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PruebaCeibaTests.swift; sourceTree = "<group>"; };
@@ -134,7 +130,6 @@
 				E03601C328FB57EA009ED6FC /* View */,
 				E03601C228FB57E7009ED6FC /* ViewModel */,
 				E05CDC9328FDD38600F12834 /* Repository */,
-				E036019528FB57B2009ED6FC /* ContentView.swift */,
 				E036019728FB57B5009ED6FC /* Assets.xcassets */,
 				E036019928FB57B5009ED6FC /* Preview Content */,
 			);
@@ -225,7 +220,6 @@
 			isa = PBXGroup;
 			children = (
 				E036019E28FB57B5009ED6FC /* UserModel.xcdatamodeld */,
-				E036019C28FB57B5009ED6FC /* Persistence.swift */,
 				E05CDC9428FDE53800F12834 /* DataController.swift */,
 			);
 			path = Repository;
@@ -361,10 +355,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E036019D28FB57B5009ED6FC /* Persistence.swift in Sources */,
 				E03601D528FB6961009ED6FC /* UserListView.swift in Sources */,
 				E03601E528FB9D30009ED6FC /* SearchObservableObject.swift in Sources */,
-				E036019628FB57B2009ED6FC /* ContentView.swift in Sources */,
 				E03601D028FB5BC6009ED6FC /* Constans.swift in Sources */,
 				E03601DF28FB7FCC009ED6FC /* PostListView.swift in Sources */,
 				E03601D728FB69DA009ED6FC /* UserCellView.swift in Sources */,
